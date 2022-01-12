@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,500;0,700;1,300&display=swap");
+// Configuration
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack
+
+.background-general {
+  background: url("/turismo/assets/img/fundo.jpeg");
+
+  .map-index {
+    a {
+      color: rgba(255, 255, 255, 0.76);
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 0.87);
+    }
+  }
+
+  .modal {
+    img {
+      width: 100%;
+    }
+    .carousel-caption {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: #dee2e65c;
+      color: #000;
+    }
+    span {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  .raleway {
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 2px;
+  }
+  .bold {
+    font-weight: 600;
+  }
+  .transparente {
+    background: #ffffffa8;
+    padding: 0;
+    .container {
+      padding: 0;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-family: "Roboto", sans-serif;
+      font-size: 2.2rem;
+      margin: 20px 0 20px 70px;
+    }
+  }
+
+  .sombra {
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.35);
+  }
+
+  .frase {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  }
+
+  .contact {
+    p {
+      font-family: "Raleway", sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1d1d1d;
+      span {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+    }
+    span {
+      color: #9e0b0f;
+      font-weight: 700;
+    }
+    form {
+      padding: 30px 10px;
+
+      select {
+        background: url("/turismo/assets/img/arrow_down.svg") no-repeat center right 10px, #fff;
+      }
+      select:after {
+        transform: rotate(45deg);
+      }
+      label {
+        padding-left: 3px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .back {
+    a {
+      font-family: "Raleway", sans-serif;
+      color: #2371d6;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 700;
+      padding-left: 10px;
+      letter-spacing: 2px;
+      .material-icons {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .pagination {
+      a {
+        color: #000;
+      }
+      .page-link:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .back:hover {
+    a {
+      color: #14498f;
+      font-weight: 800;
+    }
+  }
+
+  .gray-back {
+    background: #f2f2f2;
+    padding: 0 70px;
+    h2 {
+      margin-left: 0;
+    }
+    h3 {
+      margin: 20px 0 20px;
+    }
+    .map {
+      height: 600px;
+      padding: 0 0 20px;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .hotels {
+    .hotels-top {
+      background: #078141;
+      padding: 20px 100px;
+      color: #fff;
+    }
+    .hotels-bottom {
+      background: #f2f2f2;
+      padding: 20px 6.25rem;
+      div {
+        padding: 5px 10px;
+      }
+      a {
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+        text-decoration: none;
+      }
+    }
+  }
+  .cities {
+    padding: 0;
+    .shadow-box {
+      box-shadow: 0px 0px 10px 0px #000;
+    }
+    .col-12 {
+      padding: 0;
+    }
+    .card-city-one {
+      background: url("/tustimo/assets/img/Vindima.jpg") no-repeat center;
+      background-size: cover;
+    }
+    .card-city-two {
+      background: url("/turismo/assets/img/mariaFumaca.jpg") no-repeat center;
+      background-size: cover;
+    }
+    .image-city-one {
+      background: url("/turismo/assets/img/Vindima.jpg") no-repeat center;
+      background-size: cover;
+    }
+    .image-city-two {
+      background: url("/turismo/assets/img/mariaFumaca.jpg") no-repeat center;
+      background-size: cover;
+    }
+    .text-city {
+      font-family: "Raleway", sans-serif;
+      .city-back {
+        background: #f2f2f2;
+        padding: 22px 30px;
+        h2 {
+          margin: 0;
+          font-size: 1.75rem;
+          padding: 12px 0;
+          font-weight: 700;
+        }
+        p {
+          height: 90px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .options {
+    margin-top: -70px;
+    .card {
+      background: #f2f2f2;
+      .material-icons {
+        font-size: 100px;
+        color: #373737;
+      }
+      .card-footer {
+        background: #078141;
+        a {
+          text-decoration: none;
+        }
+        h6 {
+          color: #fff;
+          margin: 0;
+          padding: 5px 0;
+        }
+      }
+    }
+    .card:hover {
+      .material-icons {
+        color: #078141;
+      }
+    }
+  }
+  .galery-img {
+    background: url("/turismo/assets/img/Bento.png") center no-repeat;
+    background-size: cover;
+    height: 300px;
+  }
+  .leia-mais {
+    margin-bottom: 30px;
+    text-align: end;
+    a {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+      color: #078141;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+  .leia-mais:hover {
+    text-decoration: underline;
+    color: #04552b;
+  }
+  .logo {
+    img {
+      width: 60%;
+      background: #ffffffa8;
+      padding: 0 20px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+  .navbar {
+    margin-top: 70px;
+    margin-right: 0;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.514);
+    .nav-link {
+      color: #fff;
+      font-size: 1rem;
+    }
+    i {
+      color: #fff;
+      padding: 10px 4px 0;
+      font-size: 20px;
+    }
+    a {
+      padding: 20px 12px;
+    }
+    ul {
+      font-family: "Raleway", sans-serif;
+      font-size: 1.125rem;
+      margin: 0;
+      padding: 10px;
+    }
+    li {
+      padding: 0 10px;
+      a {
+        padding: 20px;
+      }
+    }
+    a:hover {
+      background-color: rgba(0, 0, 0, 0.705);
+      border-radius: 6px;
+    }
+  }
+
+  .slogan {
+    color: rgb(182, 182, 182);
+    background-color: rgba(0, 0, 0, 0.514);
+    h4 {
+      padding: 30px 0 20px;
+      text-align: center;
+      letter-spacing: 4px;
+      font-size: 1.4rem;
+    }
+    .caixa {
+      .verde {
+        background: #078141;
+      }
+      .vermelho {
+        background: #9e0b0f;
+      }
+      .amarelo {
+        background: #f9c213;
+      }
+
+      .cards {
+        .card-footer {
+          background: rgba(0, 0, 0, 0.281);
+          h6 {
+            font-size: 25px;
+          }
+        }
+        .card-1 {
+          background: url("/turismo/assets/img/Cambara.jpg") no-repeat center;
+          border-radius: 5px;
+        }
+        .card-2 {
+          background: url("/turismo/assets/img/NovaPrata-NinhodasAguias.jpg") no-repeat center;
+          border-radius: 5px;
+        }
+        .card-3 {
+          background: url("/tuturismorsimo/assets/img/Bento-CaminhoDePedras.jpg") no-repeat center;
+          border-radius: 5px;
+        }
+        .card-4 {
+          background: url("/turismo/assets/img/MariaFumacaBento.jpg") no-repeat center;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  footer {
+    .links {
+      padding: 20px 35px;
+      font-size: 1rem;
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      a:hover {
+        text-decoration: none;
+        color: #179136;
+      }
+    }
+
+    background: url("/turismo/assets/img/logo\ PROCERGS.svg") no-repeat right 80px center, #eeeeeeb0;
+    background-size: 120px;
+    width: 100%;
+  }
+  .contempladas {
+    h2 {
+      font-size: 1.75rem;
+    }
+    button {
+      padding: 0 6px;
+    }
+  }
+  .agencias {
+    h2 {
+      font-size: 1.75rem;
+    }
+    a {
+      font-size: 25px;
+      padding-right: 10px;
+      .facebook {
+        color: #3b5998;
+      }
+      .twitter {
+        color: #1da1f2;
+      }
+      .instagram {
+        color: transparent;
+        background: -webkit-radial-gradient(
+          30% 107%,
+          circle,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        -webkit-background-clip: text;
+      }
+    }
+  }
+  .service {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.35);
+    a {
+      text-decoration: none;
+    }
+    .center-card {
+      color: #fff;
+      letter-spacing: 4px;
+      text-shadow: 0px 3px 6px #0707078c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 220px;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .eventos {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/eventos.png") no-repeat;
+      background-size: cover;
+    }
+    .guias {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/guias.png");
+      background-size: cover;
+    }
+    .hospitais {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/hospitais.png");
+      background-size: cover;
+    }
+    .museus {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/museus.png");
+      background-size: cover;
+    }
+    .universidades {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/universidades.png");
+      background-size: cover;
+    }
+    .transporte {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/transporte.png") center;
+      background-size: cover;
+    }
+    .praias {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/praias.png");
+      background-size: cover;
+    }
+    .atendimento {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/atendimento.png") center;
+      background-size: cover;
+    }
+    .transfer {
+      background: linear-gradient(rgba(131, 131, 131, 0.637)), url("/turismo/assets/img/transfer.png") center;
+      background-size: cover;
+    }
+  }
+  .cartao {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    background: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.35);
+
+    .event {
+      background: #f9c213;
+      margin: 0;
+      .titulo-event {
+        color: #fff;
+        font-size: 2.8rem;
+        transform: rotate(-90deg);
+        height: 90px;
+        width: 300px;
+        padding-bottom: 300px;
+        padding-right: 30px;
+        text-align: center;
+      }
+      .info-event {
+        padding: 25px;
+        font-family: "Raleway", sans-serif;
+        h4 {
+          font-size: 1.25rem;
+        }
+        h3 {
+          padding-bottom: 10px;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+    }
+    .events {
+      .row {
+        margin: 20px 0;
+      }
+      label {
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2.8px;
+        color: #1d1d1d;
+      }
+    }
+
+    .cards-cities {
+      background: url("/turismo/assets/img/CasaCentenaria.jpg") no-repeat center;
+      background-size: cover;
+      padding-top: 550px;
+    }
+
+    .cards {
+      background: url("/turismo/assets/img/mosaico5.png") no-repeat center;
+      background-size: cover;
+      height: 320px;
+      border-radius: 5px 0 0 5px;
+    }
+    .galery {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .texto {
+      padding: 0 5%;
+      h2 {
+        margin: 0;
+        padding-bottom: 25px;
+        font-family: "Raleway", sans-serif;
+        padding-top: 30px;
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      h3 {
+        padding-top: 30px;
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      a {
+        word-break: break-all;
+      }
+    }
+    .fb-like {
+      span {
+        height: 26px;
+      }
+    }
+  }
+  .insta {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    padding: 0 8px;
+    span {
+      color: #fff;
+    }
+  }
+  .text-muted {
+    height: 20px;
+  }
+}
+.searches {
+  .custom-select {
+    background: url("/turismo/assets/img/arrow_down.svg") no-repeat center right 15px, #e9e9e9;
+  }
+  .form-control {
+    background: url("/turismo/assets/img/search.svg") no-repeat center right 15px, #e9e9e9;
+  }
+  .data {
+    background: #e9e9e9;
+  }
+}
+.map-tur {
+  background: url("/turismo/assets/img/map.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  .logo {
+    img {
+      height: 160px;
+    }
+  }
+}
+.map-result {
+  background: url("/turismo/assets/img/map.png") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  .fixo {
+    position: fixed;
+    z-index: 0;
+    top: 12vh;
+    left: -2px;
+  }
+  .side {
+    overflow: hidden;
+    margin-left: 400px;
+    display: block;
+    height: 100%;
+    width: 55%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: auto;
+
+    .d-grid {
+      margin-top: 53px;
+      margin-left: 20px;
+      button {
+        margin: 0 10px;
+        padding: 6px 16px;
+        border-radius: 20px;
+        i {
+          margin-right: 5px;
+        }
+      }
+      button:hover {
+        background: #d3ffdd;
+      }
+    }
+    .btn-green {
+      margin-top: 2vh;
+      margin-left: -2px;
+      span {
+        padding-left: 3px;
+      }
+    }
+    .block {
+      background-color: #d1d1d1e0;
+      display: block;
+      height: 100%;
+      width: 400px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      overflow: auto;
+    }
+    .block::-webkit-scrollbar {
+      display: none;
+    }
+    .logo {
+      img {
+        height: 125px;
+      }
+    }
+    .conhecer {
+      margin-top: 40px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .clima {
+    border-bottom: 2px solid #9e9e9e94;
+    .cidade {
+      padding: 7px 15px 2px 40px;
+      border-right: 2px solid #9e9e9e94;
+      h5 {
+        margin-bottom: 0;
+      }
+      h6 {
+        margin-bottom: 4px;
+      }
+      p {
+        margin: 0;
+        text-align: end;
+      }
+    }
+    .icon {
+      font-size: 40px;
+      color: #ffc107;
+    }
+  }
+  .padd {
+    padding-left: 15px;
+    .recomenda {
+      padding: 35px 0 30px;
+      overflow-x: hidden;
+      .line {
+        display: flex;
+        width: 120%;
+
+        .card {
+          position: relative;
+          background: url("/turismo/assets/img/balao.jpg") no-repeat center;
+          background-size: 220px;
+          margin-right: 15px;
+          border-radius: 10px;
+          width: 10rem;
+          h6 {
+            padding: 10rem 1.5rem 0 5px;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 118px;
+          }
+        }
+      }
+    }
+    .sobre {
+      p {
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+    }
+    .fotos {
+      padding-right: 15px;
+      a {
+        text-decoration:none;
+        font-weight: 500;
+      }
+      img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+}
+.busca {
+  background: #c7c7c7b0;
+  margin-top: 50px;
+  border-radius: 5px;
+  .form-control {
+    background: #c7c7c7b0;
+  }
+  .lupa {
+    background: url("/turismo/assets/img/search.svg") no-repeat center;
+    background-size: 20px;
+    padding: 18px;
+  }
+  .ir {
+    background: url(https://maps.gstatic.com/tactile/omnibox/directions-2x-20150909.png) no-repeat center;
+    background-size: 20px;
+    padding: 17px;
+    border-left: 1px solid #a8a8a8;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .background-general {
+    .gray-back {
+      padding: 0 10px;
+      .map {
+        padding: 0;
+        height: 500px;
+      }
+      h2 {
+        padding-left: 20px;
+      }
+    }
+
+    .transparente {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .cartao {
+      .cards {
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    .logo {
+      img {
+        width: 90%;
+      }
+    }
+    .navbar {
+      margin-top: 20px;
+      padding: 25px;
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        padding: 15px;
+      }
+      button {
+        box-shadow: none;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+    .hotels {
+      .hotels-top {
+        padding: 20px 0;
+      }
+      .hotels-bottom {
+        padding: 20px 0;
+      }
+    }
+    footer {
+      background: url("/turismo/assets/img/logo PROCERGS.svg") no-repeat right 10px bottom 10px, #eeeeeeb0;
+      background-size: 120px;
+      .links {
+        font-size: 0.75rem;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 40px;
+      }
+    }
+    .options {
+      .card {
+        .material-icons {
+          font-size: 50px;
+        }
+      }
+    }
+    .cities {
+      padding: 0;
+      .col-12 {
+        padding: 0;
+      }
+      .card-city-one {
+        background: url("/turismo/assets/img/Vindima.jpg") no-repeat center;
+        background-size: cover;
+      }
+      .card-city-two {
+        background: url("/turismo/assets/img/mariaFumaca.jpg") no-repeat center;
+        background-size: cover;
+      }
+      .image-city-one {
+        height: 250px;
+      }
+      .image-city-two {
+        height: 250px;
+      }
+    }
+  }
+}
